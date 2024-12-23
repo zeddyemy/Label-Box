@@ -3,6 +3,10 @@ body {
     --header-height: 60px;
 }
 
+.card {
+    padding: 20px;
+}
+
 .sidebar {
     width: var(--sidebar-width);
     position: fixed;

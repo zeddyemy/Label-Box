@@ -2,7 +2,7 @@
 import axios from "axios";
 
 const localApi = "http://localhost:5000/api";
-const APIurl = "http://localhost:5000/api";
+const APIurl = "https://labelbox-edel.onrender.com/api";
 const API = axios.create({
 	baseURL: APIurl,
 });
