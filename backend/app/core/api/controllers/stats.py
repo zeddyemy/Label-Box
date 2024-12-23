@@ -25,7 +25,7 @@ class StatsController:
             total_tasks = tasks_query.count()
 
             # Total expenses count and total amount
-            annotations_query = Annotation.query.order_by(Annotation.created_at.desc())
+            annotations_query = Annotation.query.order_by(Annotation.annotated_at.desc())
             total_annotations = annotations_query.count()
             
 
