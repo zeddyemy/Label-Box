@@ -8,10 +8,7 @@ LabelBox is a web application for managing projects and tasks, with features for
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Running the Application](#running-the-application)
-- [Folder Structure](#folder-structure)
 - [API Endpoints](#api-endpoints)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -83,3 +80,35 @@ LabelBox is a web application for managing projects and tasks, with features for
 
 - The backend will be running on `http://localhost:5000`
 - The frontend will be running on `http://localhost:3000`
+
+
+---
+---
+
+
+## API Endpoints
+
+
+### Projects
+
+- `GET /api/projects`: Get all projects
+- `POST /api/projects`: Create a new project
+- `GET /api/projects/:id`: Get a specific project
+- `PUT /api/projects/:id`: Update a specific project
+- `DELETE /api/projects/:id`: Delete a specific project
+
+### Tasks
+
+- `GET /api/projects/:project_id/tasks`: Get all tasks for a project
+- `POST /api/tasks`: Create a new task
+- `GET /api/tasks/:id`: Get a specific task
+- `DELETE /api/tasks/:id`: Delete a specific task
+
+### Annotations
+
+- `GET /api/annotations`: Get all annotations
+- `POST /api/annotations`: Create a new annotation
+- `GET /api/annotations/:id`: Get a specific annotation
+- `PUT /api/annotations/:id`: Update a specific annotation
+- `DELETE /api/annotations/:id`: Delete a specific annotation
+
