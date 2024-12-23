@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
 // icons
-import AirplanemodeActiveIcon from "@mui/icons-material/AirplanemodeActive";
-import SavingsIcon from "@mui/icons-material/Savings";
-import PriceCheckIcon from "@mui/icons-material/PriceCheck";
-import SubjectIcon from "@mui/icons-material/Subject";
+import DeveloperBoardIcon from "@mui/icons-material/DeveloperBoard";
+import TaskIcon from "@mui/icons-material/Task";
+import HighlightAltIcon from "@mui/icons-material/HighlightAlt";
 
 import { sendApiRequest } from '../../../services/api';
 import MetricsCard from './MetricsCard';
@@ -43,22 +42,22 @@ const Metrics = () => {
 				<MetricsCard
 					isLoading={loadingStats}
 					label={"Projects"}
-					icon={<AirplanemodeActiveIcon sx={{ fontSize: 30 }} />}
-					statNum={statNumbers.total_trips || 0}
+					icon={<DeveloperBoardIcon sx={{ fontSize: 30 }} />}
+					statNum={statNumbers.total_projects || 0}
 				/>
 
 				<MetricsCard
 					isLoading={loadingStats}
 					label={"Tasks"}
-					icon={<PriceCheckIcon sx={{ fontSize: 30 }} />}
-					statNum={statNumbers.total_expenses || 0}
+					icon={<TaskIcon sx={{ fontSize: 30 }} />}
+					statNum={statNumbers.total_tasks || 0}
 				/>
 
 				<MetricsCard
 					isLoading={loadingStats}
 					label={"Annotations"}
-					icon={<SubjectIcon sx={{ fontSize: 30 }} />}
-					statNum={statNumbers.total_itineraries || 0}
+					icon={<HighlightAltIcon sx={{ fontSize: 30 }} />}
+					statNum={statNumbers.total_annotations || 0}
 				/>
 			</div>
 		</>
