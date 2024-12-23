@@ -125,7 +125,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 								y={ann.y}
 								width={ann.width}
 								height={ann.height}
-								stroke="green"
+								stroke="blue"
 								strokeWidth={2}
 							/>
 							<Text
@@ -133,7 +133,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 								y={ann.y - 20}
 								text={ann.label}
 								fontSize={16}
-								fill="green"
+								fill="blue"
 							/>
 						</React.Fragment>
 					))}
@@ -143,7 +143,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 							y={newRect.y}
 							width={newRect.width}
 							height={newRect.height}
-							stroke="blue"
+							stroke="green"
 							strokeWidth={2}
 						/>
 					)}
