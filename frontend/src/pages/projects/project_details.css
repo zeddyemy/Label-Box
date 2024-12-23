@@ -1,0 +1,37 @@
+.project-details>* {
+    margin: 0 0 40px;
+}
+
+.project-details>.project-data {
+    padding: 20px;
+}
+
+.project-details>div .label {
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0px 0px 5px;
+}
+
+.project-details>div span {
+    display: block;
+}
+
+.task-img-container {
+    margin: 0 0 20px;
+}
+.task-img-container>* {
+    margin: 0 0 20px;
+}
+.task-img-container .task-img {
+    width: 100%;
+    height: 270px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background: #0000003d;
+}
+.task-img-container .task-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
