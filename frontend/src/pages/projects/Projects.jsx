@@ -61,14 +61,15 @@ const Projects = () => {
 
 	// Define columns and data for the Table component
 	const columns = [
-		{ field: "id", headerName: "ID", minWidth: 20 },
-		{ field: "name", headerName: "Name", minWidth: 50 },
+		{ field: "id", headerName: "ID", minWidth: 20, type: "number" },
+		{ field: "name", headerName: "Name", minWidth: 50, type: "string" },
 		{
 			field: "description",
 			headerName: "Description",
 			minWidth: 170,
+			type: "string",
 		},
-		{ field: "created_at", headerName: "Date Created ", minWidth: 110 },
+		{ field: "created_at", headerName: "Date Created ", minWidth: 110, type: "date" },
 	];
 
     if (loading) return <LoadingPage />;

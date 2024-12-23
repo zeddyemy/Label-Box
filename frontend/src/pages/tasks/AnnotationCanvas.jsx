@@ -125,7 +125,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 								y={ann.y}
 								width={ann.width}
 								height={ann.height}
-								stroke="red"
+								stroke="green"
 								strokeWidth={2}
 							/>
 							<Text
@@ -133,7 +133,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 								y={ann.y - 20}
 								text={ann.label}
 								fontSize={16}
-								fill="red"
+								fill="green"
 							/>
 						</React.Fragment>
 					))}
@@ -143,7 +143,7 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 							y={newRect.y}
 							width={newRect.width}
 							height={newRect.height}
-							stroke="green"
+							stroke="blue"
 							strokeWidth={2}
 						/>
 					)}
@@ -185,11 +185,11 @@ const AnnotationCanvas = ({ imageUrl, annotations_data, onAnnotationsChange }) =
 				</div>
 			)}
 
-			<div style={{ marginTop: "10px" }}>
+			<div className="captured-annotations">
 				<h3>Annotations</h3>
 				<ul>
 					{annotations.map((ann) => (
-						<li key={ann.id}>
+						<li key={ann.id} className="flex">
 							<strong>{ann.label}</strong> - ({Math.round(ann.x)},{" "}
 							{Math.round(ann.y)}),
 							{Math.round(ann.width)}x{Math.round(ann.height)}

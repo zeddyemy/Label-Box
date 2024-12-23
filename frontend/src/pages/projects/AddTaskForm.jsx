@@ -9,7 +9,7 @@ import { sendApiRequest } from "../../services/api";
 import Btn from "../../components/ui/Btn";
 import LinkBtn from "../../components/ui/LinkBtn";
 
-const AddTaskForm = ({ project_id = "", handleFormModalToggle }) => {
+const AddTaskForm = ({ project_id = "", handleFormModalToggle, onTaskAdded }) => {
 	const navigate = useNavigate();
 	const [selectedFile, setSelectedFile] = useState(null);
 	const [taskImg, setTaskImg] = useState("");
@@ -40,6 +40,8 @@ const AddTaskForm = ({ project_id = "", handleFormModalToggle }) => {
 
 			toast.success(data?.message);
 			handleFormModalToggle();
+			onTaskAdded();
+			navigate(`/projects/${project_id}/tasks`);
 		} catch (error) {
 			console.error("Error adding task:", error);
 			toast.error(error?.message);

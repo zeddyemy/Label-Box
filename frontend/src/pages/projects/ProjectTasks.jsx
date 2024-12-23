@@ -37,6 +37,23 @@ const ProjectTasks = () => {
 		setFormModalOpen(!formModalOpen);
 	};
 
+	const fetchTasks = async () => {
+		try {
+			const data = await sendApiRequest(`/projects/${id}/tasks`, {
+				method: "GET",
+				headers: {
+					"Content-Type": "application/json",
+				},
+			});
+			setTasks(data.data.tasks);
+		} catch (err) {
+			toast.error(err?.message || "Couldn't fetch project tasks");
+			console.error("Error fetching project tasks", err);
+		} finally {
+			setLoading(false);
+		}
+	};
+
 	useEffect(() => {
 
 		const getProjectDetails = async () => {
@@ -56,25 +73,8 @@ const ProjectTasks = () => {
 			}
 		};
 
-		const getProjectTasks = async () => {
-			try {
-				const data = await sendApiRequest(`/projects/${id}/tasks`, {
-					method: "GET",
-					headers: {
-						"Content-Type": "application/json",
-					},
-				});
-				setTasks(data.data.tasks);
-			} catch (err) {
-				toast.error(err?.message || "Couldn't fetch project tasks");
-				console.error("Error fetching project tasks", err);
-			} finally {
-				setLoading(false);
-			}
-		};
-
 		getProjectDetails();
-		getProjectTasks();
+		fetchTasks();
 	}, [id]);
 
     const handlePageChange = (event, value) => {
@@ -197,6 +197,7 @@ const ProjectTasks = () => {
 					<AddTaskForm
 						project_id={id}
 						handleFormModalToggle={handleFormModalToggle}
+						onTaskAdded={fetchTasks}
 					/>
 				}
 			/>

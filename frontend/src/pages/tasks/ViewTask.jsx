@@ -122,7 +122,7 @@ const ViewTask = () => {
 	return (
 		<>
 			<div className="task-details">
-				<PageHead title={``} headBtn={linkBtn} />
+				<PageHead title={`Draw to annotate this image`} headBtn={``} />
 			</div>
 
 			{imageUrl ? (

@@ -35,3 +35,20 @@
     margin: 0 auto;
     position: relative;
 }
+.captured-annotations {
+    margin: 10px 0;
+}
+.captured-annotations ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px 0px;
+}
+.captured-annotations ul li {
+    gap: 10px 30px;
+    justify-content: space-between !important;
+    align-items: center;
+    background: #8080805c;
+    padding: 10px 20px;
+    border-radius: var(--round-conners);
+}
