@@ -58,7 +58,7 @@ const NewProject = () => {
 						{({ isSubmitting, values }) => (
 							<Form>
 								<div className="form-groups">
-									<div className="form-group no-margin">
+									<div className="form-group">
 										<label className="label">Name</label>
 										<Field
 											type="text"
@@ -72,7 +72,7 @@ const NewProject = () => {
 										/>
 									</div>
 
-									<div className="form-group no-margin">
+									<div className="form-group">
 										<label className="label">
 											Description
 										</label>
