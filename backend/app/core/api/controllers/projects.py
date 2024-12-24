@@ -147,7 +147,25 @@ class ProjectsController:
     @staticmethod
     def edit_project(project_id):
         try:
-            pass
+            project: Project = Project.query.get(project_id)
+            if not project:
+                return error_response("Project not found", 404)
+            
+            data = request.get_json()
+            
+            name = data.get('name')
+            description = data.get('description')
+            
+            if not data or not name:
+                return error_response("Project name is required.", 400)
+            
+            project.update(name=name, description=description)
+            
+            extra_data = {"project": project.to_dict()}
+            api_response = success_response("Project updated successfully", 200, extra_data)
+        except (DataError, DatabaseError) as e:
+            log_exception('Database error occurred adding new project', e)
+            api_response = error_response('Error interacting to the database.', 500)
         except Exception as e:
             log_exception("An exception occurred adding a project:", e)
             api_response = error_response("An unexpected error occurred", 500)

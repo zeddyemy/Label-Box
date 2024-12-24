@@ -6,6 +6,7 @@ import Projects from "./pages/projects/Projects";
 import NewProject from "./pages/projects/NewProject";
 import ProjectTasks from "./pages/projects/ProjectTasks";
 import ViewTask from "./pages/tasks/ViewTask";
+import EditProject from "./pages/projects/EditProject";
 
 import UseLayout from "./components/layout/UseLayout";
 
@@ -29,6 +30,10 @@ function App() {
 					<Route
 						path="/projects/new"
 						element={<UseLayout element={<NewProject />} />}
+					/>
+					<Route
+						path="/projects/:id/edit"
+						element={<UseLayout element={<EditProject />} />}
 					/>
 					<Route
 						path="/projects/:id/tasks"

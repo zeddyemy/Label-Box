@@ -6,6 +6,11 @@ body {
 .card {
     padding: 20px;
 }
+.err-msg {
+    color: red;
+    font-size: 14px;
+    margin: 5px 0 0;
+}
 
 .sidebar {
     width: var(--sidebar-width);
