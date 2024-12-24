@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet-async";
 import { useNavigate, useParams } from "react-router-dom";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { toast } from "react-toastify";
 
 import { newProjectSchema } from "../../services/validationSchemas";
 import { sendApiRequest, fetchProject } from "../../services/api";
