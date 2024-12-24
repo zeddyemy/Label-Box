@@ -69,7 +69,7 @@ const ProjectTasks = () => {
 				toast.error(err?.message || "Couldn't fetch project details");
 				console.error("Error fetching project details", err);
 			} finally {
-				setLoading(false);
+				setLoading(true);
 			}
 		};
 
