@@ -41,7 +41,7 @@ const Header = ({ handleSidebarToggle }) => {
 				</div>
 
 				<div className="header-icons flex">
-					<Link to="/profile">
+					<Link to="#">
 						<div className="profile-ico">
 							<div className="profile-img fitImg">
 								<img src={defProfile} alt="profile image" />
