@@ -30,7 +30,7 @@ const Header = ({ handleSidebarToggle }) => {
 											id="search-field"
 											type="text"
 											name="s"
-											className="rounded form-control search-field"
+											className="rounded form-element search-field"
 											placeholder="What would you like to find?"
 										/>
 									</Form>
