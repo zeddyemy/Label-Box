@@ -66,7 +66,7 @@ const Projects = () => {
 		{
 			field: "description",
 			headerName: "Description",
-			minWidth: 170,
+			minWidth: 70,
 			type: "string",
 		},
 		{ field: "created_at", headerName: "Date Created ", minWidth: 110, type: "date" },

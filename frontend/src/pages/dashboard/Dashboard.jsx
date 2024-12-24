@@ -50,7 +50,7 @@ const Dashboard = () => {
 		{
 			field: "description",
 			headerName: "Description",
-			minWidth: 170,
+			minWidth: 70,
 			type: "string",
 		},
 		{
