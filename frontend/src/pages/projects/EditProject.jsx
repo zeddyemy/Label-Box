@@ -53,7 +53,7 @@ const EditProject = () => {
 			});
 
 			toast.success(data?.message);
-			navigate(`/projects/${id}`);
+			navigate(`/projects/${id}tasks`);
 		} catch (error) {
 			console.error("Error updating project:", error);
 			toast.error(error?.message);

@@ -36,6 +36,10 @@ function App() {
 						element={<UseLayout element={<EditProject />} />}
 					/>
 					<Route
+						path="/projects/:id"
+						element={<Navigate to="/projects/:id/tasks" />}
+					/>
+					<Route
 						path="/projects/:id/tasks"
 						element={<UseLayout element={<ProjectTasks />} />}
 					/>
